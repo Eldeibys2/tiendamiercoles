@@ -13,8 +13,16 @@ let productos = [
 {nombre:"Boligrafo",precio:6000,descripcion:"Boligrafo atl nacional"},
 {nombre:"Poster",precio:12000,descripcion:"Poster  atl nacional"}
 
-
-
 ]
 
-console.log(productos)
+//Como recorrer un arreglo con js
+//1. Tener un arreglo
+
+productos.forEach(function(producto){
+    console.log(producto.nombre)
+    console.log(producto.precio)
+})
+
+
+
+
