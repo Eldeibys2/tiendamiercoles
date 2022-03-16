@@ -19,10 +19,13 @@ let productos = [
 //1.Creo una variable para almacenar la base sobre la cual voy a pintar 
 let fila=document.getElementById("fila")
 
+
 productos.forEach(function (producto) {
+    console.log(producto.foto)
     console.log(producto.nombre)
     console.log(producto.precio)
-    console.log(producto.foto)
+    console.log(producto.descripcion)
+    
 
     //pintando etiquetas
 
@@ -42,13 +45,31 @@ productos.forEach(function (producto) {
     foto.src=producto.foto
 
     //h4 con la clase text center
-    let titulo=document.createElement("h4")
+    let titulo=document.createElement("h2")
     titulo.classList.add("text-center")
     titulo.textContent=producto.nombre
 
+    //h3 con la clase text center y text success
+    let precios = document.createElement("h3")
+    precios.classList.add("text-center")
+    precios.classList.add("text-success")
+    precios.textContent=producto.precio
+
+    //h2 con la clase text center
+    let desc = document.createElement("h4")
+    desc.classList.add("text-center")
+    desc.textContent=producto.descripcion
+
+    //button con la clase  btn btn-secondary
+   
+    
+
     //3.Padres e hijos
+    
     tarjeta.appendChild(foto)
     tarjeta.appendChild(titulo)
+    tarjeta.appendChild(precios)
+    tarjeta.appendChild(desc)
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
     
