@@ -2,16 +2,16 @@
 
 let productos = [
 
-{foto: 'img/termo.jpg',nombre:"Termo",precio:20000,descripcion:"Termo de atl nacional"},
-{foto:'img/camiseta.jpg',nombre:"Camiseta",precio:150000,descripcion:"Camiseta original atl nacional"},
-{foto:'img/gorra.jpg',nombre:"Gorra",precio:75000,descripcion:"Gorra original atl nacional"},
-{foto:'img/mameluco.jpg',nombre:"Mameluco",precio:40000,descripcion:"Mameluco original atl nacional"},
-{foto:'img/buzo.jpg',nombre:"Buzo",precio:125000,descripcion:"Buzo original atl nacional"},
-{foto:'img/cahqueta.jpg',nombre:"Chaqueta",precio:150000,descripcion:"Chaqueta original atl nacional"},
-{foto:'img/tapabocas.jpg',nombre:"Tapabocas",precio:11000,descripcion:"Tapabocas original atl nacional"},
-{foto:'img/llavero.jpg',nombre:"Llavero",precio:20000,descripcion:"Llavero atl nacional"},
-{foto:'img/boligrafo.jpg',nombre:"Boligrafo",precio:6000,descripcion:"Boligrafo atl nacional"},
-{foto:'img/poster.jpg',nombre:"Poster",precio:12000,descripcion:"Poster  atl nacional"}
+{foto: 'img/termo.jpg',nombre:"Termo",precio:20000,descripcion:"Termo de atl nacional",boton:"ver producto"},
+{foto:'img/camiseta.jpg',nombre:"Camiseta",precio:150000,descripcion:"Camiseta original atl nacional",boton:"ver producto"},
+{foto:'img/gorra.jpg',nombre:"Gorra",precio:75000,descripcion:"Gorra original atl nacional",boton:"ver producto"},
+{foto:'img/mameluco.jpg',nombre:"Mameluco",precio:40000,descripcion:"Mameluco original atl nacional",boton:"ver producto"},
+{foto:'img/buzo.jpg',nombre:"Buzo",precio:125000,descripcion:"Buzo original atl nacional",boton:"ver producto"},
+{foto:'img/cahqueta.jpg',nombre:"Chaqueta",precio:150000,descripcion:"Chaqueta original atl nacional",boton:"ver producto"},
+{foto:'img/tapabocas.jpg',nombre:"Tapabocas",precio:11000,descripcion:"Tapabocas original atl nacional",boton:"ver producto"},
+{foto:'img/llavero.jpg',nombre:"Llavero",precio:20000,descripcion:"Llavero atl nacional",boton:"ver producto"},
+{foto:'img/boligrafo.jpg',nombre:"Boligrafo",precio:6000,descripcion:"Boligrafo atl nacional",boton:"ver producto"},
+{foto:'img/poster.jpg',nombre:"Poster",precio:12000,descripcion:"Poster  atl nacional",boton:"ver producto"}
 
 ]
 //Necesito recorrer un arreglo en js
@@ -25,6 +25,7 @@ productos.forEach(function (producto) {
     console.log(producto.nombre)
     console.log(producto.precio)
     console.log(producto.descripcion)
+    console.log(producto.boton)
     
 
     //pintando etiquetas
@@ -42,6 +43,7 @@ productos.forEach(function (producto) {
     //img con la clase card-img-top
     let foto=document.createElement("img")
     foto.classList.add("card-img-top")
+    foto.classList.add("h-100")
     foto.src=producto.foto
 
     //h4 con la clase text center
@@ -61,7 +63,10 @@ productos.forEach(function (producto) {
     desc.textContent=producto.descripcion
 
     //button con la clase  btn btn-secondary
-   
+   let boton =document.createElement("button")
+   boton.classList.add("btn","btn-secondary")
+
+   boton.textContent=producto.boton
     
 
     //3.Padres e hijos
@@ -70,6 +75,7 @@ productos.forEach(function (producto) {
     tarjeta.appendChild(titulo)
     tarjeta.appendChild(precios)
     tarjeta.appendChild(desc)
+    tarjeta.appendChild(boton)
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
     
