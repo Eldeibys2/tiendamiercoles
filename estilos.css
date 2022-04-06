@@ -5,3 +5,8 @@
 .icono{
     font-size: 30px;
 }
+
+.fondo{
+    background-image:url("./img/escudo.jpg");
+    background-size: cover;
+}
