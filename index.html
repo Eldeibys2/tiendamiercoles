@@ -13,8 +13,8 @@
 
 
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark animate__animated animate__backInRight" >
-      <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark animate__animated animate__backInRight justify-content-center" >
+      <div class="container-fluid justify-content-center">
         <a class="navbar-brand" href="#">Atletico Nacional</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -38,22 +38,25 @@
                 
               </ul>
             </li>
-            <li class="nav-item">
-             
-            </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+        
+          
         </div>
       </div>
     </nav>
 
 </header>
 <main>
-
-  <section>
+<section>
+  <button class="btn btn-primary justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+    Registrese
+  </button>
+  
+  <div class="offcanvas offcanvas-start text-center tabindex= -1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title justify-content-center " id="offcanvasExampleLabel">Registro</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
     <form id="formularioregistro">
       <div class="mb-3 mt-5 ">
         <label  class="form-label">Email</label>
@@ -63,16 +66,16 @@
         <label  class="form-label">Password</label>
         <input type="password" class="form-control" id="password">
       </div>
-      <button type="submit" class="btn btn-primary w-100" id="botonregistro">Registro</button>
+      <button type="submit" class="btn btn-primary w-100" id="botonregistro">Registrar</button>
     </form>
-  </section>
+</section>
   <section>
     <div class="container mt-5 mb-3 " >
         <div class="row vh-100 justify-content-center">
             <div class="col-8 aling-self-center">
                 <h4 class="text-center text-white ">Proximo partido de Atletico Nacional</h4>
                 
-               <img src="img/partidoac.jpeg" alt="fotopartido" class="w-100 img-fluid">
+               <img src="img/partido19.jpg" alt="fotopartido" class="w-100 img-fluid">
 
 
             </div> 
